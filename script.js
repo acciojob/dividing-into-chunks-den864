@@ -8,12 +8,12 @@ const divide = (nums, k) => {
         sum+=nums[i];
 
         if(sum>k){
-            res.push(...nums.slice(start,i));
+            res.push(nums.slice(start,i));
             sum=nums[i];
             start=i;
         }
     }
-    if(start<nums.length) res.push(...nums.slice(start));
+    if(start<nums.length) res.push(nums.slice(start));
 
     return res;
 };
